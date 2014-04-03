@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Présentation Géopnr avec reveal.js</title>
+		<title>Présentation SOTM-FR avec reveal.js</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -21,10 +21,16 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
 		</script>
-<link media="print" href="css/print /pdf.css" rel="stylesheet">
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -37,58 +43,43 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-
-<h2>L'expérience OSM sur le territoire du PNR de Millevaches en Limousin </h2>
+<h1> Zones blanches,<br> osm en campagne</h1>
+<p>L'expérience OSM sur le territoire du PNR de Millevaches en Limousin </p>
 
     <p><img  style="background-color:transparent; border-width:0px; box-shadow:none"  src="img/osm.png" > </p>
-				<p>	<small> 14 novembre 2013 </small> </p>
+				<p>	<small> Avril 2014    SOTM-FR </small> </p>
 <p style="font-size:40px">  <a href="http://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">Paternoster Quentin </a>
-    / <a href="http://www.pnr-millevaches.fr/">  PNR de Millevaches en Limousin</a> </p>
-	<p>		<small> Appuyez sur "s" pour bénéficier des notes de présentation </small> </p>
-
-	<aside class="notes">
-		La présentation a eu lieu après l'introduction de Christian Quest. Elle porte sur le bilan du stage de 6 mois réalisé au sein du PNR dans le cadre de la validation de mon Master2 SIGAT.
-	</aside>
-
+     </p>
                 </section>
-
 <section data-transition="linear" data-background-transition="slide">
-					<h2>Déroulé de la présentation </h2>
-    <p class="fragment roll-in">Raisons de notre choix</p>
-                    <p class="fragment roll-in">Carte touristique </p>
-                    <p class="fragment roll-in" >Une plateforme cartographique pour les habitants</p>
-    <p class="fragment roll-in">Vers d'autres usages</p>
-
-
+					<h2>Pour ces 20 minutes</h2>
+    <p class="fragment roll-in">Le Plateau de Millevaches / les Millevaches</p>
+   
+    <p class="fragment roll-in">L'expérience au sein du PNR</p>
+                    <p class="fragment roll-in">Hors les murs de l'institution</p>
                 </section>
-
-
-
-        <section>
+    <section>
+<section>
+        <h2> Le plateau  </h2>
+        <img  style="background-color:transparent; border-width:0px; box-shadow:none"  src="img/bibi.png" >
+                </section>
+                <section>
+                    <iframe width="100%" height="300px" frameBorder="0" src="http://umap.openstreetmap.fr/fr/map/carte-sans-nom_6720?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&datalayersControl=false&displayCaptionOnLoad=false&displayDataBrowserOnLoad=false#8/45.815/2.774"></iframe><p><a href="http://umap.openstreetmap.fr/fr/map/carte-sans-nom_6720">Voir en plein écran</a></p>
+                    </section>
+</section>
+                
+                <section>
             <section>
-<h2>pourquoi Openstreetmap ?</h2>
-    <img width="300" style="background-color:transparent; border-width:0px; box-shadow:none" src="img/noun_project_22.svg">
-	<aside class="notes">
-L'idée est de pouvoir nous mettre au clair pour les raisons de notre investissement dans OpenStreetMap.
-
-                </aside>
-
-
-                </section>
-
+<h2>Au sein du Parc naturel régional</h2><p>
+<img width="190"   style="background-color:transparent; border-width:0px; box-shadow:none"  src="img/pnr-millevaches.jpg" >
+                </p>
+<p class="fragment roll-in">Carte touristique</p>
+<p class="fragment roll-in">Plateforme cartographique</p>
+                    </section>
      <section>
-        <h2>Mise en commun</h2>
-         <div> <p >    <img class="fragment roll-in"  width="300" style="float:left;background-color:transparent; border-width:0px; box-shadow:none" src="img/noun_project_25481.svg">
-    <img class="fragment roll-in"  width="300" style="float:right;background-color:transparent; border-width:0px; box-shadow:none" src="img/noun_project_21266.svg"> </p>
-             </div>
-        <div> <p class="fragment roll-in"  style=" padding:10px;position:absolute; top:550px" >
-Porte d'entrée simple pour de la production partagée de données </p></div>
-	<aside class="notes">
-À l'image de la métaphore du SILO, le fait de travailler directement dans OpenStreetMap nous semble résoudre un certain nombre de questions sur la production de données et leur harmonisation. il est évident que ce modèle ne s'applique par dans toutes les situations.
-
-                </aside>
-
-
+        <h2>Un Parc naturel Régional</h2>
+    <img class="fragment roll-in"  width="300" style="background-color:transparent; border-width:0px; box-shadow:none" src="img/noun_project_22.svg"> 
+           
          </section>
 <section>
               <h2>expérimenter</h2>
@@ -97,15 +88,7 @@ Porte d'entrée simple pour de la production partagée de données </p></div>
 <p class="fragment roll-in"  >Peut-on travailler avec OpenStreetMap ?</p>
 <p class="fragment roll-in" >Est-ce uniquement réservé aux villes ? </p>
     </section>
-
-       <section>
-
-    <h2>d'un point de vue pragmatique</h2>
-                   <div class="fragment">
-      <img  width="300" style="background-color:transparent; border-width:0px; box-shadow:none" src="img/noun_project_931.svg"> <br />
-           <em> Réaliser quelques économies </em>
-</div>
-           </section> </section>
+ </section>
 
 
         <section>
@@ -134,70 +117,11 @@ Porte d'entrée simple pour de la production partagée de données </p></div>
 </section>
 
 
-            <section>
-    <h2>osm dans le limousin</h2>
-
-<iframe class="fragment" style="width: 892px; height: 545.912px; max-height: none; max-width: none;" src="http://resultmaps.neis-one.org/oooc?zoom=8&amp;lat=45.89922&amp;lon=1.81949&amp;layers=B00" height="700px" width="900px">
-</iframe>
-</section>
-             <section>
-        <h3>d'un point de vue quantitatif <br>
-</h3>
-<a href="http://www.geofabrik.de/index.html">    <img  src="img/geofabrik.png" alt="geofabrik"> </a>
-
-<table style="position:absolute; border-collapse:collapse;; width: 447px; height: 216px; z-index: 4; left: 251px; top: 300px;" class="fragment" cellspacing="0">
-    <tbody>
-<tr>
-<th >
-        <b>Fichiers régionaux</b>
-
-</th>
-    <th>Taille</th>
-
-</tr>
-<tr>
-<td>Poitou - Charentes<br>
-</td>
-<td>155 MB<br>
-</td>
-
-</tr>
-<tr>
-<td>Centre<br>
-</td>
-<td>95 MB<br>
-</td>
-
-</tr>
-<tr>
-<td>Auvergne</td>
-<td>74 MB<br>
-</td>
-</tr>
-<tr>
-<td>Limousin<br>
-</td>
-<td>44 MB<br>
-</td>
-</tr>
-</tbody>
-</table>
-
-</section>
-
-
  <section>
-    <h3>Carte comparaison BD TOPO
-</h3>
          <img  width="450"  style="background-color:transparent; border-width:0px; box-shadow:none" src="img/ratio.png"> <br />
 
 
 </section>
-<section>
-    <h3> Comparaison avec le R500 de l'IGN</h3>
-            <iframe width='100%' height='520' frameborder='0' src='http://bobo.cartodb.com/viz/488a7740-5068-11e3-a963-5404a6a69006/embed_map?title=true&description=true&search=false&shareable=false&cartodb_logo=true&layer_selector=true&legends=true&scrollwheel=true&sublayer_options=1&sql=SELECT%20*%20FROM%20com&sw_lat=44.63739123445585&sw_lon=-0.318603515625&ne_lat=46.521075663842836&ne_lon=4.954833984374999'></iframe>
-            </section>
-
 
             <section>
     <h2>contribution</h2>
@@ -233,12 +157,6 @@ Porte d'entrée simple pour de la production partagée de données </p></div>
     <p >
 <a  href="https://esriosmeditor.codeplex.com/"> <img width="20%" src="img/arcgis_osm.png"> </a> <br>
 Arcgis editor + OSM editor
-        <li class="fragment">
-             Importation via Tooblox
-    </li>
-                <li class="fragment">
-              Export format AI
-    </li>
     </p>
 
 </section>
@@ -279,7 +197,7 @@ La mise sous licence ouverte des données R500 et BD Carthage est une bonne nouv
 <p>
         <img width="150"  style="background-color:transparent; border-width:0px; box-shadow:none" src="img/noun_project_12638.svg">
     </p>
-      <small>  Apporter de la subjectivité à OpenStreetMap </small>
+<p> Appropriation du territoire par ses habitants</p>
 
 	<aside class="notes">
 Ce projet est issu d'échanges avec les acteurs locaux: associations, coopératives, etc.
@@ -287,126 +205,66 @@ Ce projet est issu d'échanges avec les acteurs locaux: associations, coopérati
         </section>
         <section>
         <h2> Une dynamique locale singulière</h2>
-<iframe width="500" height="300" frameBorder="0" src="http://u.osmfr.org/fr/map/alter_2875?locateControl=0&scaleControl=0&miniMap=0&homeControl=0&scrollWheelZoom=0&allowEdit=0&editInOSMControl=0&tileLayersControl=0&jumpToLocationControl=0&embedControl=0"></iframe><p> <small> <a href="http://u.osmfr.org/fr/map/alter_2875">  See full screen</a> </small></p>
-
-            <p clas="fragment" > <small>Un réseau d'acteurs en lien avec <a href="https://fr.wikipedia.org/wiki/%C3%89conomie_sociale">  l'économie sociale et solidaire     </a> </small> </p>
-            <p clas="fragment" > <small> Un intérêt à mettre en écho ces initiatives par la carte	 </small> </p>
-
+        <img width="350"  style="background-color:transparent; border-width:0px; box-shadow:none" src="img/icon_22440.svg">
+            
+            <p clas="fragment" > Un réseau d'acteurs en lien avec <a href="https://fr.wikipedia.org/wiki/%C3%89conomie_sociale">  l'économie sociale et solidaire     </a>  </p>
+            
+            <p clas="fragment" >Un intérêt à mettre en écho ces initiatives par la carte </p>
 
         </section>
-
-
-
-      <section>
-   <h2> Exemple de plateforme</h2>
-<iframe src="http://saclay.carte-ouverte.org/" width="900" height="500" ></iframe>
-      </section>
-	<aside class="notes">
-Une étude a été menée autour des différentes plateformes existantes dont la plateforme mise en place sur le plateau de Saclay
-        </aside>
-
 <section>
-      <h2> Une plateforme cartographique</h2>
-   <img  style="background-color:transparent; border-width:0px; box-shadow:none" src="img/pk_pq.png">
-
-      </section>
-      <section>
-          <div style="float:right">
-      <h2> Préalables nécessaires</h2>
-          <p class="fragment" > Établir les informations à valoriser</p>
-          <p class="fragment"> Les informations existantes sur le territoire</p>
-         <p class="fragment"> Proposer un modèle de gouvernance ouvrant à la participation</p>
-              <p class="fragment"> Déterminer l'outil technique </p>
-              </div>
-      </section>
-
-
-<section>
-    <br>
-    <h3>Approches proposées<br>
-        <img src="img/approche.png">
-</h3>
-</section>
-
-<section>
-    <h2>Modèle de gouvernance </h2>
-        <p class="fragment"> Partagé avec les acteurs locaux</p>
-<br>
-    <br>
-    <h2 class="fragment">Plateforme CHIMERE</h2>
-
-    <div class="fragment"  style="float:left">
-        <p><b>FONCTIONS</b></p>
-        <p>Modèle participatif</p>
-    <p>Agenda géolocalisé</p>
-        <p>Simple</p>
+                <h3> S'organiser et se rendre accessible	  </h3>
+<div>
+    
+            <img width="150"  style="background-color:transparent; border-width:0px; box-shadow:none; color:white" src="img/noun_project_1898.svg">
+    
+    <p class="fragment"  style="float:left"><b>Quotidien</b> </p> 
+    <p class="fragment"   style="float:right"><b>Écologie</b></p>                 
+    </div><div>
+    <p class="fragment"  ><b>L'accueil</b></p>
     </div>
-        <div class="fragment"  style="float:right">
-            <p><b>TECHNIQUE</b></p>
-            <p>Geodjango</p>
-    <p>Lien avec OSM </p>
-            <p>Import de données</p>
-        <p></p>
-    </div>
-<aside class="notes">
-L'approche participative de la plateforme implique une ouverture sur la gestion de celle-ci. 
-Le rôle du Parc étant d'assurer le fonctionnement du service et de prendre part au 
-
-L'outil Chimère a été retenu car celui-ci propose des fonctionalités sur des besoins clés.
-
-</aside>
-
       </section>
 
  <section>
-    <h2>Avancement du projet</h2>
-<p class="fragment roll-in">Attente de validation au sein du Parc <br>
+    <h2>Au bout du compte...</h2>
+<p style="color:red"  class="fragment roll-in">Pas de suivi par le Parc <br>
 </p>
-<p class="fragment roll-in">Mise en lien avec l'initiative d'une communauté de commune locale<br>
+<p style="color:#00d800"  class="fragment roll-in">Une expérience partagée<br>
 </p>
 </section>
-<aside class="notes">
-Le travail mené a été proposé sous forme de note auprès du Parc, une décision sur le déploiement sera prise prochainement.
-
-Il constitue une somme d'informations pour les différentes structures souhaitant mettre en place un tel dispositif.
-
-
-</aside>
-
                 </section>
 <section>
     <section>
-        <h2>Autres usages imaginés</h2>
+        <h2>Hors les murs</h2>
    <img width="150"  style="background-color:transparent; border-width:0px; box-shadow:none" src="img/noun_project_13681.svg">
 
 </section>
     <section>
-    <h2>Les cartoparties comme <br>  Outil pédagogique</h2>
-    <div class="fragment"  style="float:left">
-    <img  width="300"  style="float:left; background-color:transparent; border-width:0px; box-shadow:none" src="img/normal_DSCI0043.JPG"> <br>
-        <p> Patrimoine naturel</p>
-
-    </div>
-    <div class="fragment"  style="float:right">
-<img  width="300"  style="float:right; background-color:transparent; border-width:0px; box-shadow:none" src="img/normal_vide_grenier_royere2007.jpg">
-
-        <p> Patrimoine bâti</p>
-
-    </div>
+<h2> Cartographie des habitations vides</h2>
+   <img style="background-color:transparent; border-width:0px; box-shadow:none" src="img/felletin.png">
 
 </section>
-<section>
+    <section>
+        
+<h2> Liens avec des Offices de tourisme</h2>
+   <img style="background-color:transparent; border-width:0px; box-shadow:none" src="img/img_felletin/03_fev.jpeg">
 
-    <h2>travail partagé entre structures via OSM</h2>
-    <iframe src="http://mapcraft.nanodesu.ru/pie/320" width="700" height="500"></iframe>
+        
+        </section>
+        <section>
+        
+<h2> Mise en lien avec des démarches artistiques</h2>
+   <img style="background-color:transparent; border-width:0px; box-shadow:none" src="img/vass.png">
 
-    </section>
+        </section>
+
         </section>
 
 
           <section>
                 <h1> Fin de la présentation</h1>
 
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>
                 </section>
                 <section> <section>
                     <h2> Ressources </h2>
@@ -414,20 +272,21 @@ Il constitue une somme d'informations pour les différentes structures souhaitan
 <p> <a href="presentation_14_11.pdf"> Cette présentation en PDF </a> </p> </section>
 <section>
                     <h2> Mentions </h2>
-                  g <p style="font-size:14px">
+                   <p style="font-size:18px">
                        <a href="http://thenounproject.com/noun/social-network/#icon-No25481" target="_blank">Social Network</a> designed by <a href="http://thenounproject.com/gustavs92" target="_blank">  </a> from The Noun Project
     </p>
-     <p style="font-size:14px">
+     <p style="font-size:18px">
          <a href="http://thenounproject.com/noun/network/#icon-No21266" target="_blank">-</a> designed by <a href="http://thenounproject.com/bnvk" target="_blank">Brennan Novak</a> from The Noun Project
          </p>
 
-    <p style="font-size:14px">
+    <p style="font-size:18px">
     <a href="http://thenounproject.com/noun/speaker/#icon-No1898" target="_blank">Speaker</a> designed by <a href="http://thenounproject.com/hcokim" target="_blank">Harold Kim</a> from The Noun Project
 
 
          </p>
-<p style="font-size:14px">
+<p style="font-size:18px">
 
+<a href="http://thenounproject.com/term/network/22440/">Network </a> designed by <a href="http://thenounproject.com/brunocast/"> Bruno Castro </a> from the Noun Project
          </p>
 
     <p style="font-size:14px">
@@ -439,21 +298,8 @@ Il constitue une somme d'informations pour les différentes structures souhaitan
 <p style="font-size:14px">
 
          </p>
-
-
-
                     </section>
-
-
                 </section>
-
-
-
-
-
-
-
-
 			</div>
 
 		</div>

@@ -21,10 +21,16 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
 		</script>
-<link media="print" href="css/print /pdf.css" rel="stylesheet">
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -38,7 +44,7 @@
 			<div class="slides">
 				<section>
 
-<h2>L'expérience OSM au PNR de Millevaches en Limousin </h2>
+<h2>L'expérience OSM sur le territoire du PNR de Millevaches en Limousin </h2>
 
     <p><img  style="background-color:transparent; border-width:0px; box-shadow:none"  src="img/osm.png" > </p>
 				<p>	<small> 14 novembre 2013 </small> </p>
@@ -298,8 +304,7 @@ Ce projet est issu d'échanges avec les acteurs locaux: associations, coopérati
 
 
       <section>
-   <h2> Exemple de plateforme</h2>
-<iframe src="http://saclay.carte-ouverte.org/" width="900" height="500" ></iframe>
+   <h2> Exemple de plateforme</h2>>
       </section>
 	<aside class="notes">
 Une étude a été menée autour des différentes plateformes existantes dont la plateforme mise en place sur le plateau de Saclay
@@ -410,12 +415,11 @@ Il constitue une somme d'informations pour les différentes structures souhaitan
                 </section>
                 <section> <section>
                     <h2> Ressources </h2>
-      <a href="rapport.pdf">  Le rapport de stage (77 pages) </a> </section>
-      <a href="geopnr.zip"> Cette  présentation en html (consultable hors ligne) </a> </section>
-<a href="presentation_14_11.pdf"> Cette présentation en PDF </a> </section>
+     <p> <a href="geopnr.zip"> Cette  présentation en html (consultable hors ligne) </a> </p> 
+<p> <a href="presentation_14_11.pdf"> Cette présentation en PDF </a> </p> </section>
 <section>
                     <h2> Mentions </h2>
-                   <p style="font-size:14px">
+                  g <p style="font-size:14px">
                        <a href="http://thenounproject.com/noun/social-network/#icon-No25481" target="_blank">Social Network</a> designed by <a href="http://thenounproject.com/gustavs92" target="_blank">  </a> from The Noun Project
     </p>
      <p style="font-size:14px">
